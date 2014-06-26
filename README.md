@@ -20,3 +20,5 @@
 # org.apache.cordova.contacts
 
 Plugin documentation: [doc/index.md](doc/index.md)
+
+Edited the official org.apache.cordova.contacts plugin so that it only shows visible contacts on Android (i.e. the ones you would see if you clicked on "Contacts" in Android, not the so called contacts that are returned from things like email history and the like)

@@ -464,7 +464,7 @@ public class ContactAccessorSdk5 extends ContactAccessor {
         // If the user is searching for every contact then short circuit the method
         // and return a shorter where clause to be searched.
         if (searchTerm.equals("%")) {
-            options.setWhere("(" + ContactsContract.Contacts.IN_VISIBLE_GROUP + " = 1 AND " + ContactsContract.Data.CONTACT_ID + " LIKE ? )"); //added in_visible_group check to remove contacts that are not really in contacts (such as ones in gmail email history, ...etc)
+            options.setWhere("(" + ContactsContract.Contacts.IN_VISIBLE_GROUP + " = 1 AND " + ContactsContract.Data.CONTACT_ID + " LIKE ? )"); //:om added in_visible_group check to remove contacts that are not really in contacts (such as ones in gmail email history, ...etc) should do more testing, consider querying ContactsContract.Contacts instead of ContactsContract.Data
             options.setWhereArgs(new String[] { searchTerm });
             return options;
         }
